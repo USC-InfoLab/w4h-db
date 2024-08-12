@@ -88,6 +88,14 @@ To remove the Docker image, use the following command:
 docker rmi nocera/w4h-db:latest
 ```
 
+## Starting a Shell on a Running Container
+
+To open a shell session on a running container, execute:
+
+```bash
+docker exec -it nocera/w4h-db:latest sh
+```
+
 ## Connect to the W4H Database using pgAdmin
 
 Download and install [pgAdmin](https://www.pgadmin.org/). Then configure with the following:
