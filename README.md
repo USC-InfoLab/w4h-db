@@ -4,10 +4,14 @@ This project contains Dockerfiles and related configuration files for setting up
 
 ## How to Build
 
-We assume ../w4h-datasets contains the [w4h-datasets]()
+We assume ../w4h-datasets contains the [w4h-datasets](https://github.com/USC-InfoLab/w4h-datasets)
 
 ```bash
+#build image
 docker build -t w4h-db --build-context datasets=../w4h-datasets/ .
+
+#run the container
+docker run --name w4h-db-container -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d w4h-db
 ```
 
 Explanation:
